@@ -7,26 +7,28 @@ struct Item
 {
 	int weight;
 	int value;
+	double valueRatio;
 
 	Item(int w, int v)
 	{
 		weight = w;
 		value = v;
+		valueRatio = (double)value / weight;
 	}
 
 	Item()
 	{
-		weight = rand() % 25 + 1;
-		value = rand() & 25 + 1;
+		weight = rand() % 30 + 1;
+		value = rand() % 30 + 1;
+		valueRatio = (double)value / weight;
 	}
 
 	string ToString() const
 	{
 		ostringstream oss;
-		double valueRatio = (double) value / weight ;
 		oss << "Value: " << value
 			<< " Weight: " << weight
-			<< " Value Ration: " << valueRatio;
+			<< " Value Ratio: " << valueRatio;
 
 		return oss.str();
 	}
@@ -35,7 +37,6 @@ struct Item
 class knapsack
 {
 	public:
-		vector<Item*> sackOfItems;
 		void InitializeSackOfItems();
 		void DisplaySackOfItems();
 		double GetHighestWeightTotal(int weightLimit);
@@ -43,6 +44,8 @@ class knapsack
 		double GetBestValueTotal(int weightLimit);
 
 	private:
+
+		vector<Item*> sackOfItems;
 		bool SortByWeight(Item& a, Item& b);
 		bool SortByValue(Item& a, Item& b);
 		bool SortByBestValue(Item& a, Item& b);

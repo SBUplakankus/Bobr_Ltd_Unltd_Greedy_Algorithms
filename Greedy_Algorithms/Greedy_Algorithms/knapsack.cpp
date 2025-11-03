@@ -1,8 +1,10 @@
 #include "knapsack.h"
 #include <iostream>
+#include <algorithm>
 
 void knapsack::InitializeSackOfItems()
 {
+    sackOfItems.clear();
     for (int i = 0; i < 10; i++)
     {
         sackOfItems.push_back(new Item());
@@ -11,13 +13,24 @@ void knapsack::InitializeSackOfItems()
 
 void knapsack::DisplaySackOfItems()
 {
-    
+    if (sackOfItems[0] == nullptr) return;
+
+    for (auto item : sackOfItems)
+        cout << item->ToString() << endl;
 }
 
 double knapsack::GetHighestWeightTotal(int weightLimit)
 {
-    int currentWeight;
+    sort(sackOfItems.begin(), sackOfItems.end(), SortByWeight);
+    int currentWeight = 0;
+    double total = 0;
 
+    for (int i = 0; i < sackOfItems.size(); i++)
+    {
+
+    }
+
+    return 0;
 
 
 }
@@ -48,7 +61,7 @@ bool knapsack::SortByValue(Item& a, Item& b)
 
 bool knapsack::SortByBestValue(Item& a, Item& b)
 {
-    double bv1 = (double)a.value / a.weight;
-    double bv2 = (double)b.value / b.weight;
+    double bv1 = a.valueRatio;
+    double bv2 = b.valueRatio;
     return bv1 > bv2;
 }

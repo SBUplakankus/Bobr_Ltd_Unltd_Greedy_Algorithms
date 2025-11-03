@@ -124,6 +124,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Greedy_Algorithms.cpp" />
+    <ClCompile Include="knapsack.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="knapsack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
