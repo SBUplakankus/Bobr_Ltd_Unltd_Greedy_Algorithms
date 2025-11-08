@@ -7,5 +7,5 @@ int main()
 {
     knapsack sack;
     sack.InitializeSackOfItems();
-    sack.DisplaySackOfItems();
+    sack.DisplaySackValues();
 }
