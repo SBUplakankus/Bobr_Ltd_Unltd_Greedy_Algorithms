@@ -19,6 +19,21 @@ void knapsack::DisplaySackOfItems()
         cout << item->ToString() << endl;
 }
 
+bool knapsack::SortByWeight(Item* a, Item* b)
+{
+    return a->weight > b->weight;
+}
+
+bool knapsack::SortByValue(Item* a, Item* b)
+{
+    return a->value > b->value;
+}
+
+bool knapsack::SortByBestValue(Item* a, Item* b)
+{
+    return a->valueRatio > b->valueRatio;
+}
+
 double knapsack::GetHighestWeightTotal(int weightLimit)
 {
     sort(sackOfItems.begin(), sackOfItems.end(), SortByWeight);
@@ -27,12 +42,24 @@ double knapsack::GetHighestWeightTotal(int weightLimit)
 
     for (int i = 0; i < sackOfItems.size(); i++)
     {
+        if (currentWeight == weightLimit)
+            break;
 
+        if (currentWeight + sackOfItems[i]->weight > weightLimit)
+        {
+            double remainingWeight = weightLimit - currentWeight;
+            double leftoverValue = sackOfItems[i]->value * (remainingWeight / sackOfItems[i]->weight);
+            total += leftoverValue;
+            break;
+        }
+        else
+        {
+            currentWeight += sackOfItems[i]->weight;
+            total += sackOfItems[i]->value;
+        }
     }
 
-    return 0;
-
-
+    return total;
 }
 
 double knapsack::GetHighestValueTotal(int weightLimit)
@@ -45,23 +72,4 @@ double knapsack::GetBestValueTotal(int weightLimit)
     return 0.0;
 }
 
-bool knapsack::SortByWeight(Item& a, Item& b)
-{
-    double w1 = a.weight;
-    double w2 = b.weight;
-    return w1 > w2;
-}
 
-bool knapsack::SortByValue(Item& a, Item& b)
-{
-    double v1 = a.value;
-    double v2 = b.value;
-    return v1 > v2;
-}
-
-bool knapsack::SortByBestValue(Item& a, Item& b)
-{
-    double bv1 = a.valueRatio;
-    double bv2 = b.valueRatio;
-    return bv1 > bv2;
-}

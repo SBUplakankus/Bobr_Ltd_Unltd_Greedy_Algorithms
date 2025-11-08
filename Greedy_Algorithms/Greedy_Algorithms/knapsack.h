@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <sstream>
+#include <iomanip>
 using namespace std;
 
 struct Item
@@ -28,7 +29,7 @@ struct Item
 		ostringstream oss;
 		oss << "Value: " << value
 			<< " Weight: " << weight
-			<< " Value Ratio: " << valueRatio;
+			<< " Value Ratio: " << setprecision(2) << valueRatio;
 
 		return oss.str();
 	}
@@ -36,6 +37,12 @@ struct Item
 
 class knapsack
 {
+	private:
+
+		vector<Item*> sackOfItems;
+		static bool SortByWeight(Item* a, Item* b);
+		static bool SortByValue(Item* a, Item* b);
+		static bool SortByBestValue(Item* a, Item* b);
 	public:
 		void InitializeSackOfItems();
 		void DisplaySackOfItems();
@@ -43,12 +50,7 @@ class knapsack
 		double GetHighestValueTotal(int weightLimit);
 		double GetBestValueTotal(int weightLimit);
 
-	private:
-
-		vector<Item*> sackOfItems;
-		bool SortByWeight(Item& a, Item& b);
-		bool SortByValue(Item& a, Item& b);
-		bool SortByBestValue(Item& a, Item& b);
+	
 
 };
 
