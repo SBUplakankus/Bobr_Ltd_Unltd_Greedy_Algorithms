@@ -2,10 +2,20 @@
 #include <iostream>
 #include <algorithm>
 
+knapsack::knapsack()
+{
+}
+
+knapsack::~knapsack()
+{
+    for (auto item : sackOfItems)
+        delete item;
+}
+
 void knapsack::InitializeSackOfItems()
 {
     sackOfItems.clear();
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < NUM_ITEMS; i++)
     {
         sackOfItems.push_back(new Item());
     }
@@ -64,12 +74,58 @@ double knapsack::GetHighestWeightTotal(int weightLimit)
 
 double knapsack::GetHighestValueTotal(int weightLimit)
 {
-    return 0.0;
+    sort(sackOfItems.begin(), sackOfItems.end(), SortByValue);
+    int currentWeight = 0;
+    double total = 0;
+
+    for (int i = 0; i < sackOfItems.size(); i++)
+    {
+        if (currentWeight == weightLimit)
+            break;
+
+        if (currentWeight + sackOfItems[i]->weight > weightLimit)
+        {
+            double remainingWeight = weightLimit - currentWeight;
+            double leftoverValue = sackOfItems[i]->value * (remainingWeight / sackOfItems[i]->weight);
+            total += leftoverValue;
+            break;
+        }
+        else
+        {
+            currentWeight += sackOfItems[i]->weight;
+            total += sackOfItems[i]->value;
+        }
+    }
+
+    return total;
 }
 
 double knapsack::GetBestValueTotal(int weightLimit)
 {
-    return 0.0;
+    sort(sackOfItems.begin(), sackOfItems.end(), SortByBestValue);
+    int currentWeight = 0;
+    double total = 0;
+
+    for (int i = 0; i < sackOfItems.size(); i++)
+    {
+        if (currentWeight == weightLimit)
+            break;
+
+        if (currentWeight + sackOfItems[i]->weight > weightLimit)
+        {
+            double remainingWeight = weightLimit - currentWeight;
+            double leftoverValue = sackOfItems[i]->value * (remainingWeight / sackOfItems[i]->weight);
+            total += leftoverValue;
+            break;
+        }
+        else
+        {
+            currentWeight += sackOfItems[i]->weight;
+            total += sackOfItems[i]->value;
+        }
+    }
+
+    return total;
 }
 
 

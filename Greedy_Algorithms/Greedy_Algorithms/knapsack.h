@@ -38,19 +38,19 @@ struct Item
 class knapsack
 {
 	private:
-
+		static const int NUM_ITEMS = 10;
 		vector<Item*> sackOfItems;
 		static bool SortByWeight(Item* a, Item* b);
 		static bool SortByValue(Item* a, Item* b);
 		static bool SortByBestValue(Item* a, Item* b);
 	public:
+		knapsack();
+		~knapsack();
 		void InitializeSackOfItems();
 		void DisplaySackOfItems();
 		double GetHighestWeightTotal(int weightLimit);
 		double GetHighestValueTotal(int weightLimit);
 		double GetBestValueTotal(int weightLimit);
-
-	
 
 };
 
