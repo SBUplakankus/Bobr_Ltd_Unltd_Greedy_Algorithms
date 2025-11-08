@@ -51,11 +51,38 @@ class knapsack
 	public:
 		knapsack();
 		~knapsack();
+
+		/**
+		 * @brief Fill the sack with randomnly generated items
+		 */
 		void InitializeSackOfItems();
+
+		/**
+		 * @brief Display the sack of items in console
+		 */
 		void DisplaySackOfItems();
+
+		/**
+		 * @brief Run the greedy algorithm to maximize total weight
+		 * @param weightLimit Maximum weight allowed in the sack
+		 */
 		void GetHighestWeightTotal(int weightLimit);
+
+		/**
+		 * @brief Run the greedy algorithm to maximize total value
+		 * @param weightLimit Maximum weight allowed in the sack
+		 */
 		void GetHighestValueTotal(int weightLimit);
+
+		/**
+		 * @brief Run the greedy algorithm to maximize value to weight ratio
+		 * @param weightLimit Maximum weight allowed in the sack
+		 */
 		void GetBestValueTotal(int weightLimit);
+
+		/**
+		 * @brief Display the results of the greedy algorithms
+		 */
 		void DisplaySackValues();
 };
 

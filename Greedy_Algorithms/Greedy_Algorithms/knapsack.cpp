@@ -51,15 +51,18 @@ bool knapsack::SortByBestValue(Item* a, Item* b)
 void knapsack::GetHighestWeightTotal(int weightLimit)
 {
     cout << "========== Sorted by Weight ==========" << endl;
+
+    // Sort the vector from highest weight to lowest
     sort(sackOfItems.begin(), sackOfItems.end(), SortByWeight);
     int currentWeight = 0;
     double total = 0;
 
     for (int i = 0; i < sackOfItems.size(); i++)
-    {
+    {   
         if (currentWeight == weightLimit)
             break;
 
+        // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
         if (currentWeight + sackOfItems[i]->weight > weightLimit)
         {
             double remainingWeight = weightLimit - currentWeight;
@@ -83,6 +86,8 @@ void knapsack::GetHighestWeightTotal(int weightLimit)
 void knapsack::GetHighestValueTotal(int weightLimit)
 {
     cout << "========== Sorted by Value ==========" << endl;
+
+    // Sort the vector from highest value to lowest
     sort(sackOfItems.begin(), sackOfItems.end(), SortByValue);
     int currentWeight = 0;
     double total = 0;
@@ -92,6 +97,7 @@ void knapsack::GetHighestValueTotal(int weightLimit)
         if (currentWeight == weightLimit)
             break;
 
+        // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
         if (currentWeight + sackOfItems[i]->weight > weightLimit)
         {
             double remainingWeight = weightLimit - currentWeight;
@@ -115,6 +121,8 @@ void knapsack::GetHighestValueTotal(int weightLimit)
 void knapsack::GetBestValueTotal(int weightLimit)
 {
     cout << "======== Sorted by Best Value ========" << endl;
+
+    // Sort the vector from highest value to weight ratio to lowest
     sort(sackOfItems.begin(), sackOfItems.end(), SortByBestValue);
     int currentWeight = 0;
     double total = 0;
@@ -124,6 +132,7 @@ void knapsack::GetBestValueTotal(int weightLimit)
         if (currentWeight == weightLimit)
             break;
 
+        // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
         if (currentWeight + sackOfItems[i]->weight > weightLimit)
         {
             double remainingWeight = weightLimit - currentWeight;
