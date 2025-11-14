@@ -56,37 +56,37 @@ class knapsack
 		knapsack();
 		~knapsack();
 
-		/**
-		 * @brief Fill the sack with randomnly generated items
-		 */
+		/// <summary>
+		/// Fill the sack with randomnly generated items
+		/// </summary>
 		void initializeSackOfItems();
 
-		/**
-		 * @brief Display the sack of items in console
-		 */
+		/// <summary>
+		/// Display the sack of items in console
+		/// </summary>
 		void displaySackOfItems();
 
-		/**
-		 * @brief Run the greedy algorithm to maximize total weight
-		 * @param weightLimit Maximum weight allowed in the sack
-		 */
+		/// <summary>
+		/// Run the greedy algorithm to maximize total weigh
+		/// </summary>
+		/// <param name="weightLimit">Maximum limit for the sack</param>
 		void getHighestWeightTotal(int weightLimit);
 
-		/**
-		 * @brief Run the greedy algorithm to maximize total value
-		 * @param weightLimit Maximum weight allowed in the sack
-		 */
+		/// <summary>
+		/// Run the greedy algorithm to maximize total value
+		/// </summary>
+		/// <param name="weightLimit">Maximum limit for the sack</param>
 		void getHighestValueTotal(int weightLimit);
 
-		/**
-		 * @brief Run the greedy algorithm to maximize value to weight ratio
-		 * @param weightLimit Maximum weight allowed in the sack
-		 */
+		/// <summary>
+		/// Run the greedy algorithm to maximize value to weight ratio
+		/// </summary>
+		/// <param name="weightLimit">Maximum limit for the sack</param>
 		void getBestValueTotal(int weightLimit);
 
-		/**
-		 * @brief Display the results of the greedy algorithms
-		 */
+		/// <summary>
+		/// Display the results of the greedy algorithms
+		/// </summary>
 		void displaySackValues();
 };
 

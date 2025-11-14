@@ -28,11 +28,18 @@ struct Alien
 	{
 	}
 
+	/// <summary>
+	/// Kill the alien
+	/// </summary>
 	void kill()
 	{
 		health = 0;
 	}
 
+	/// <summary>
+	/// Damage the alien based on a given percentage
+	/// </summary>
+	/// <param name="damagePercent">Percentage of Damage done to the aliens health</param>
 	void damage(double damagePercent)
 	{
 		double newHealth = health *= (1.0 - damagePercent);
@@ -65,10 +72,26 @@ class defence_system
 	public:
 		defence_system();
 		~defence_system();
-		void populateTargetsList();
 		static bool sortTargetsByLowestEnergyToKill(Alien* a, Alien* b);
+
+		/// <summary>
+		/// Populate the target list with randomnly generate aliens
+		/// </summary>
+		void populateTargetsList();
+
+		/// <summary>
+		/// Display the aliens in the target vector
+		/// </summary>
 		void displayTargets();
+
+		/// <summary>
+		/// Run the attack simulation for the defence system
+		/// </summary>
 		void attackTargets();
+
+		/// <summary>
+		/// Display the full defence system simulation
+		/// </summary>
 		void displayDefenceSystem();
 };
 

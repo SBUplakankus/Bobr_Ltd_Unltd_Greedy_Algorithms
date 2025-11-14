@@ -6,11 +6,14 @@ using namespace std;
 
 int main()
 {
+    // New Random Generation Each Time
     srand(time(nullptr));
 
+    // Display the Knapsack Demonstration
     knapsack sack;
     sack.displaySackValues();
 
+    // Display the Alien Defence Demonstration
     defence_system defence;
     defence.displayDefenceSystem();
 }

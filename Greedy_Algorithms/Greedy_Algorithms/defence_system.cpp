@@ -38,6 +38,8 @@ void defence_system::displayTargets()
 void defence_system::attackTargets()
 {
 	cout << "======== Defence System Engaging ========" << endl;
+
+	// Sort the vector of aliens
 	sort(currentTargets.begin(), currentTargets.end(), sortTargetsByLowestEnergyToKill);
 
 	currentKills = 0;
@@ -47,8 +49,10 @@ void defence_system::attackTargets()
 	{
 		Alien* currentAlien = currentTargets[i];
 
+		// If the energy remaining is 0 exit the loop
 		if (energyRemaining <= 0) break;
 
+		// If the current alien can't be killed with the remaining energy, damage the maximum percentage of its health
 		if (energyRemaining - currentAlien->energyToKill < 0)
 		{
 			double damagePercent = energyRemaining / (double)currentAlien->energyToKill;
@@ -58,6 +62,7 @@ void defence_system::attackTargets()
 		}
 		else
 		{
+			// Kill the current alien and remove the energy that it took
 			energyRemaining -= currentAlien->energyToKill;
 			currentAlien->kill();
 			currentKills++;
