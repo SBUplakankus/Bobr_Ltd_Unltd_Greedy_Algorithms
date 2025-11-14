@@ -10,7 +10,7 @@ This document provides a detailed analysis of our greedy algorithm examples, inc
 
 | Aspect | Analysis |
 |--------|---------|
-| Time Complexity | O(n log n) (sorting aliens by ease to kill) |
+| Time Complexity | O(n log n) - Sorting aliens by ease to kill |
 | Advantages | Kills the most amount of aliens possible |
 | Limitations | May not kill the closest or most dangerous aliens |
 
@@ -22,8 +22,9 @@ This document provides a detailed analysis of our greedy algorithm examples, inc
 
 | Aspect | Analysis |
 |--------|---------|
-| Time Complexity | O(n log n) (sorting items by value/weight) |
+| Time Complexity | O(n log n) - Sorting items by value/weight |
 | Advantages | Gives most value possible within the weight limit |
 | Limitations | May want as many or as few items as possible instead |
 
 ---
+
