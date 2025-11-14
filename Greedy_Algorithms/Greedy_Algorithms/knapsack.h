@@ -27,6 +27,10 @@ struct Item
 		valueRatio = (double)value / weight;
 	}
 
+	~Item()
+	{
+	}
+
 	string ToString() const
 	{
 		ostringstream oss;
