@@ -44,18 +44,19 @@ struct Alien
 };
 class defence_system
 {
-public:
-	defence_system();
-	~defence_system();
-	static bool sortTargetsByLowestEnergyToKill(Alien* a, Alien* b);
-	void displayTargets();
-	void attackTargets();
+	private:
+		static const int ALIEN_TARGETS_TO_POPULATE = 10;
+		vector<Alien*> currentTargets;
+		int energyRemaining;
+		int currentKills;
 
-private:
-	void populateTargetsList();
-	static const int ALIEN_TARGETS_TO_POPULATE = 10;
-	vector<Alien*> currentTargets;
-	int energyRemaining;
-	int currentKills;
+	public:
+		defence_system();
+		~defence_system();
+		void populateTargetsList();
+		static bool sortTargetsByLowestEnergyToKill(Alien* a, Alien* b);
+		void displayTargets();
+		void attackTargets();
+		void displayDefenceSystem();
 };
 

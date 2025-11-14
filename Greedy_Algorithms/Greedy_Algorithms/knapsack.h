@@ -31,7 +31,7 @@ struct Item
 	{
 	}
 
-	string ToString() const
+	string toString() const
 	{
 		ostringstream oss;
 		oss << "Item ID: " << id
@@ -49,9 +49,9 @@ class knapsack
 		static const int NUM_ITEMS = 10;
 		static const int TEST_WEIGHT_LIMIT = 25;
 		vector<Item*> sackOfItems;
-		static bool SortByWeight(Item* a, Item* b);
-		static bool SortByValue(Item* a, Item* b);
-		static bool SortByBestValue(Item* a, Item* b);
+		static bool sortByWeight(Item* a, Item* b);
+		static bool sortByValue(Item* a, Item* b);
+		static bool sortByBestValue(Item* a, Item* b);
 	public:
 		knapsack();
 		~knapsack();
@@ -59,34 +59,34 @@ class knapsack
 		/**
 		 * @brief Fill the sack with randomnly generated items
 		 */
-		void InitializeSackOfItems();
+		void initializeSackOfItems();
 
 		/**
 		 * @brief Display the sack of items in console
 		 */
-		void DisplaySackOfItems();
+		void displaySackOfItems();
 
 		/**
 		 * @brief Run the greedy algorithm to maximize total weight
 		 * @param weightLimit Maximum weight allowed in the sack
 		 */
-		void GetHighestWeightTotal(int weightLimit);
+		void getHighestWeightTotal(int weightLimit);
 
 		/**
 		 * @brief Run the greedy algorithm to maximize total value
 		 * @param weightLimit Maximum weight allowed in the sack
 		 */
-		void GetHighestValueTotal(int weightLimit);
+		void getHighestValueTotal(int weightLimit);
 
 		/**
 		 * @brief Run the greedy algorithm to maximize value to weight ratio
 		 * @param weightLimit Maximum weight allowed in the sack
 		 */
-		void GetBestValueTotal(int weightLimit);
+		void getBestValueTotal(int weightLimit);
 
 		/**
 		 * @brief Display the results of the greedy algorithms
 		 */
-		void DisplaySackValues();
+		void displaySackValues();
 };
 
