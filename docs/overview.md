@@ -9,7 +9,7 @@ They are commonly used in games as optimisation is key which is why we chose to 
 | Problem | Description | Greedy Strategy |
 |---------|-------------|----------------|
 | **Alien Defence System** | Kill the maximum amount of aliens before running out of energy | Kills enemies in order of lowest energy usage |
-| **Knapsack Problem** | Fill the knapsack with the most value available | Pick items with highest value-to-weight ratio first |
+| **Knapsack Problem** | Get the most value from a given list of items | Pick items with highest value-to-weight ratio first |
 | **Fuhad Solution** | ... | ... |
 
 ## Advantages
@@ -28,3 +28,4 @@ They are commonly used in games as optimisation is key which is why we chose to 
 ---
 
 This repository provides explanations, code implementations, and visual examples of greedy algorithms in C++
+
