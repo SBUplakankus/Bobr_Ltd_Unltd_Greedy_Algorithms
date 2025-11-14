@@ -2,6 +2,8 @@
 
 Group Project with Seán, Fuhad and Nikita
 
+The function of this repository is to educate people on how Greedy Algorithms work as part of our Data Structures and Algorithms Module
+
 ---
 
 ## 📚 Table of Contents
