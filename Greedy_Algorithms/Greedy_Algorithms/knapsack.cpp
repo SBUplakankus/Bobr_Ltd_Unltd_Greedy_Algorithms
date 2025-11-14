@@ -12,7 +12,7 @@ knapsack::~knapsack()
         delete item;
 }
 
-void knapsack::InitializeSackOfItems()
+void knapsack::initializeSackOfItems()
 {
     sackOfItems.clear();
     for (int i = 0; i < NUM_ITEMS; i++)
@@ -21,61 +21,63 @@ void knapsack::InitializeSackOfItems()
     }
 }
 
-void knapsack::DisplaySackOfItems()
+void knapsack::displaySackOfItems()
 {
     if (sackOfItems[0] == nullptr) return;
 
     cout << "========== Sack of Items ==========" << endl;
 
     for (auto item : sackOfItems)
-        cout << item->ToString() << endl;
+        cout << item->toString() << endl;
 
     cout << "------------------------------------" << endl << endl;
 }
 
-bool knapsack::SortByWeight(Item* a, Item* b)
+bool knapsack::sortByWeight(Item* a, Item* b)
 {
     return a->weight > b->weight;
 }
 
-bool knapsack::SortByValue(Item* a, Item* b)
+bool knapsack::sortByValue(Item* a, Item* b)
 {
     return a->value > b->value;
 }
 
-bool knapsack::SortByBestValue(Item* a, Item* b)
+bool knapsack::sortByBestValue(Item* a, Item* b)
 {
     return a->valueRatio > b->valueRatio;
 }
 
-void knapsack::GetHighestWeightTotal(int weightLimit)
+void knapsack::getHighestWeightTotal(int weightLimit)
 {
     cout << "========== Sorted by Weight ==========" << endl;
 
     // Sort the vector from highest weight to lowest
-    sort(sackOfItems.begin(), sackOfItems.end(), SortByWeight);
+    sort(sackOfItems.begin(), sackOfItems.end(), sortByWeight);
     int currentWeight = 0;
     double total = 0;
 
     for (int i = 0; i < sackOfItems.size(); i++)
     {   
+        Item* currentItem = sackOfItems[i];
+
         if (currentWeight == weightLimit)
             break;
 
         // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
-        if (currentWeight + sackOfItems[i]->weight > weightLimit)
+        if (currentWeight + currentItem->weight > weightLimit)
         {
             double remainingWeight = weightLimit - currentWeight;
-            double leftoverValue = sackOfItems[i]->value * (remainingWeight / sackOfItems[i]->weight);
+            double leftoverValue = currentItem->value * (remainingWeight / currentItem->weight);
             total += leftoverValue;
-            cout << sackOfItems[i]->ToString() << " ---> " << remainingWeight / sackOfItems[i]->weight << "% Added" << endl;
+            cout << currentItem->toString() << " ---> " << remainingWeight / currentItem->weight << "% Added" << endl;
             break;
         }
         else
         {
-            currentWeight += sackOfItems[i]->weight;
-            total += sackOfItems[i]->value;
-            cout << sackOfItems[i]->ToString() << " ---> 100% Added" << endl;
+            currentWeight += currentItem->weight;
+            total += currentItem->value;
+            cout << currentItem->toString() << " ---> 100% Added" << endl;
         }
     }
 
@@ -83,34 +85,36 @@ void knapsack::GetHighestWeightTotal(int weightLimit)
     cout << "Total Value: " << total << endl << endl;
 }
 
-void knapsack::GetHighestValueTotal(int weightLimit)
+void knapsack::getHighestValueTotal(int weightLimit)
 {
     cout << "========== Sorted by Value ==========" << endl;
 
     // Sort the vector from highest value to lowest
-    sort(sackOfItems.begin(), sackOfItems.end(), SortByValue);
+    sort(sackOfItems.begin(), sackOfItems.end(), sortByValue);
     int currentWeight = 0;
     double total = 0;
 
     for (int i = 0; i < sackOfItems.size(); i++)
     {
+        Item* currentItem = sackOfItems[i];
+
         if (currentWeight == weightLimit)
             break;
 
         // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
-        if (currentWeight + sackOfItems[i]->weight > weightLimit)
+        if (currentWeight + currentItem->weight > weightLimit)
         {
             double remainingWeight = weightLimit - currentWeight;
-            double leftoverValue = sackOfItems[i]->value * (remainingWeight / sackOfItems[i]->weight);
+            double leftoverValue = currentItem->value * (remainingWeight / currentItem->weight);
             total += leftoverValue;
-            cout << sackOfItems[i]->ToString() << " ---> " << remainingWeight / sackOfItems[i]->weight << "% Added" << endl;
+            cout << currentItem->toString() << " ---> " << remainingWeight / currentItem->weight << "% Added" << endl;
             break;
         }
         else
         {
-            currentWeight += sackOfItems[i]->weight;
-            total += sackOfItems[i]->value;
-            cout << sackOfItems[i]->ToString() << " ---> 100% Added" << endl;
+            currentWeight += currentItem->weight;
+            total += currentItem->value;
+            cout << currentItem->toString() << " ---> 100% Added" << endl;
         }
     }
 
@@ -118,34 +122,36 @@ void knapsack::GetHighestValueTotal(int weightLimit)
     cout << "Total Value: " << total << endl << endl;
 }
 
-void knapsack::GetBestValueTotal(int weightLimit)
+void knapsack::getBestValueTotal(int weightLimit)
 {
     cout << "======== Sorted by Best Value ========" << endl;
 
     // Sort the vector from highest value to weight ratio to lowest
-    sort(sackOfItems.begin(), sackOfItems.end(), SortByBestValue);
+    sort(sackOfItems.begin(), sackOfItems.end(), sortByBestValue);
     int currentWeight = 0;
     double total = 0;
 
     for (int i = 0; i < sackOfItems.size(); i++)
     {
+        Item* currentItem = sackOfItems[i];
+
         if (currentWeight == weightLimit)
             break;
 
         // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
-        if (currentWeight + sackOfItems[i]->weight > weightLimit)
+        if (currentWeight + currentItem->weight > weightLimit)
         {
             double remainingWeight = weightLimit - currentWeight;
-            double leftoverValue = sackOfItems[i]->value * (remainingWeight / sackOfItems[i]->weight);
+            double leftoverValue = currentItem->value * (remainingWeight / currentItem->weight);
             total += leftoverValue;
-            cout << sackOfItems[i]->ToString() << " ---> " << remainingWeight / sackOfItems[i]->weight << "% Added" << endl;
+            cout << currentItem->toString() << " ---> " << remainingWeight / currentItem->weight << "% Added" << endl;
             break;
         }
         else
         {
-            currentWeight += sackOfItems[i]->weight;
-            total += sackOfItems[i]->value;
-            cout << sackOfItems[i]->ToString() << " ---> 100% Added" << endl;
+            currentWeight += currentItem->weight;
+            total += currentItem->value;
+            cout << currentItem->toString() << " ---> 100% Added" << endl;
         }
     }
 
@@ -153,14 +159,16 @@ void knapsack::GetBestValueTotal(int weightLimit)
     cout << "Total Value: " << total << endl << endl;
 }
 
-void knapsack::DisplaySackValues()
+void knapsack::displaySackValues()
 {
+    initializeSackOfItems();
+    cout << "------------------------------------" << endl;
     cout << "GREEDY ALGORITHM KNAPSACK DEMONSTRATION" << endl;
     cout << "Test Weight Total: " << TEST_WEIGHT_LIMIT << endl << endl;
-    DisplaySackOfItems();
-    GetHighestWeightTotal(TEST_WEIGHT_LIMIT);
-    GetHighestValueTotal(TEST_WEIGHT_LIMIT);
-    GetBestValueTotal(TEST_WEIGHT_LIMIT);
+    displaySackOfItems();
+    getHighestWeightTotal(TEST_WEIGHT_LIMIT);
+    getHighestValueTotal(TEST_WEIGHT_LIMIT);
+    getBestValueTotal(TEST_WEIGHT_LIMIT);
 }
 
 

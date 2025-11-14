@@ -1,11 +1,19 @@
 
 #include <iostream>
 #include "knapsack.h"
+#include "defence_system.h"
 using namespace std;
 
 int main()
 {
+    // New Random Generation Each Time
+    srand(time(nullptr));
+
+    // Display the Knapsack Demonstration
     knapsack sack;
-    sack.InitializeSackOfItems();
-    sack.DisplaySackValues();
+    sack.displaySackValues();
+
+    // Display the Alien Defence Demonstration
+    defence_system defence;
+    defence.displayDefenceSystem();
 }
