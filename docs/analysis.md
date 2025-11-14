@@ -5,8 +5,8 @@ This document provides a detailed analysis of our greedy algorithm examples, inc
 ---
 
 ## 1. Alien Defence System
-**Problem:** Select the maximum number of non-overlapping activities from a given set.  
-**Greedy Strategy:** Always pick the next activity that finishes earliest.
+**Problem:** Kill the highest amount of aliens as possible before running out of energy.  
+**Greedy Strategy:** Always pick the alien that requires the least amount to kill.
 
 | Aspect | Analysis |
 |--------|---------|
@@ -27,4 +27,5 @@ This document provides a detailed analysis of our greedy algorithm examples, inc
 | Limitations | May want as many or as few items as possible instead |
 
 ---
+
 
