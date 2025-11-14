@@ -1,24 +1,22 @@
 #include "defence_system.h"
 #include <iostream>
+#include <iomanip>
 #include <algorithm>
 
 bool defence_system::sortTargetsByLowestEnergyToKill(Alien* a, Alien* b)
 {
-	return a->getEnergyToKill() > b->getEnergyToKill();
+	return a->energyToKill < b->energyToKill;
 }
 
 void defence_system::populateTargetsList()
 {
+	currentTargets.clear();
 	for (int i = 0; i < ALIEN_TARGETS_TO_POPULATE; i++)
-		currentTargets[i] = new Alien(i);
-
-	sort(currentTargets.begin(), currentTargets.end(), sortTargetsByLowestEnergyToKill);
+		currentTargets.push_back(new Alien(i));
 }
 
 defence_system::defence_system()
 {
-	currentKills = 0;
-	populateTargetsList();
 }
 
 defence_system::~defence_system()
@@ -29,17 +27,53 @@ defence_system::~defence_system()
 
 void defence_system::displayTargets()
 {
+	cout << "========== Alien Targets ==========" << endl;
+
 	for (auto alien : currentTargets)
 		cout << alien->toString() << endl;
+
+	cout << "------------------------------------" << endl << endl;
 }
 
 void defence_system::attackTargets()
 {
+	cout << "======== Defence System Engaging ========" << endl;
+	sort(currentTargets.begin(), currentTargets.end(), sortTargetsByLowestEnergyToKill);
 
+	currentKills = 0;
+	energyRemaining = DEFENCE_SYSTEM_STARTING_ENERGY;
+
+	for (int i = 0; i < currentTargets.size(); i++)
+	{
+		Alien* currentAlien = currentTargets[i];
+
+		if (energyRemaining <= 0) break;
+
+		if (energyRemaining - currentAlien->energyToKill <= 0)
+		{
+			double energy = DEFENCE_SYSTEM_STARTING_ENERGY - energyRemaining;
+			double damagePercent = energy / currentAlien->energyToKill;
+			currentAlien->damage(damagePercent);
+			cout << currentAlien->toString() << " Status: " << fixed << setprecision(0) << (damagePercent * 10) << "% Damaged" << endl;
+			break;
+		}
+		else
+		{
+			energyRemaining -= currentAlien->energyToKill;
+			currentAlien->kill();
+			currentKills++;
+			cout << currentAlien->toString() << " Status: Killed" << endl;
+		}
+	}
+
+	cout << "------------------------------------" << endl;
+	cout << "Total Kills: " << currentKills << endl << endl;
 }
 
 void defence_system::displayDefenceSystem()
 {
-
+	populateTargetsList();
+	displayTargets();
+	attackTargets();
 }
 

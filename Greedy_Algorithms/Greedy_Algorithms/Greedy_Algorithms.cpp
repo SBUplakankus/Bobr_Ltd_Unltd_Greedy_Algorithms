@@ -6,9 +6,11 @@ using namespace std;
 
 int main()
 {
+    srand(time(nullptr));
+
     knapsack sack;
     sack.displaySackValues();
 
     defence_system defence;
-    defence.populateTargetsList();
+    defence.displayDefenceSystem();
 }

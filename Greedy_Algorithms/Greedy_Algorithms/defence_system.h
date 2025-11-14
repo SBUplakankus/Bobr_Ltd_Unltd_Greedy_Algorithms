@@ -6,13 +6,14 @@ using namespace std;
 
 struct Alien
 {
-	int id, health, distance;
+	int id, health, distance, energyToKill;
 
 	Alien(int i)
 	{
 		id = i;
-		health = rand() % 100 + 50;
-		distance = rand() % 1000 + 1;
+		health = rand() % 100 + 1;
+		distance = rand() % 100 + 1;
+		energyToKill = distance + (health * 2) / 10;
 	}
 
 	Alien(int i, int h, int d)
@@ -20,15 +21,22 @@ struct Alien
 		id = i;
 		health = h;
 		distance = d;
+		energyToKill = distance + (health * 5) / 10;
 	}
 
 	~Alien()
 	{
 	}
 
-	int getEnergyToKill()
+	void kill()
 	{
-		return distance + (health * 5) / 10;
+		health = 0;
+	}
+
+	void damage(double damagePercent)
+	{
+		double amount = damagePercent / health;
+		health -= (int)amount;
 	}
 
 	string toString() const
@@ -37,7 +45,7 @@ struct Alien
 		oss << "Alien ID: " << id
 			<< " Health: " << health
 			<< " Distance: " << distance
-			<< " Energy To Kill: " << getEnergyToKill;
+			<< " Energy To Kill: " << energyToKill;
 
 		return oss.str();
 	}
@@ -46,6 +54,7 @@ class defence_system
 {
 	private:
 		static const int ALIEN_TARGETS_TO_POPULATE = 10;
+		static const int DEFENCE_SYSTEM_STARTING_ENERGY = 100;
 		vector<Alien*> currentTargets;
 		int energyRemaining;
 		int currentKills;

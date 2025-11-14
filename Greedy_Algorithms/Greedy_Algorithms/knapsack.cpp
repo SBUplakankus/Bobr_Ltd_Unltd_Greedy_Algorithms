@@ -59,23 +59,25 @@ void knapsack::getHighestWeightTotal(int weightLimit)
 
     for (int i = 0; i < sackOfItems.size(); i++)
     {   
+        Item* currentItem = sackOfItems[i];
+
         if (currentWeight == weightLimit)
             break;
 
         // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
-        if (currentWeight + sackOfItems[i]->weight > weightLimit)
+        if (currentWeight + currentItem->weight > weightLimit)
         {
             double remainingWeight = weightLimit - currentWeight;
-            double leftoverValue = sackOfItems[i]->value * (remainingWeight / sackOfItems[i]->weight);
+            double leftoverValue = currentItem->value * (remainingWeight / currentItem->weight);
             total += leftoverValue;
-            cout << sackOfItems[i]->toString() << " ---> " << remainingWeight / sackOfItems[i]->weight << "% Added" << endl;
+            cout << currentItem->toString() << " ---> " << remainingWeight / currentItem->weight << "% Added" << endl;
             break;
         }
         else
         {
-            currentWeight += sackOfItems[i]->weight;
-            total += sackOfItems[i]->value;
-            cout << sackOfItems[i]->toString() << " ---> 100% Added" << endl;
+            currentWeight += currentItem->weight;
+            total += currentItem->value;
+            cout << currentItem->toString() << " ---> 100% Added" << endl;
         }
     }
 
@@ -94,23 +96,25 @@ void knapsack::getHighestValueTotal(int weightLimit)
 
     for (int i = 0; i < sackOfItems.size(); i++)
     {
+        Item* currentItem = sackOfItems[i];
+
         if (currentWeight == weightLimit)
             break;
 
         // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
-        if (currentWeight + sackOfItems[i]->weight > weightLimit)
+        if (currentWeight + currentItem->weight > weightLimit)
         {
             double remainingWeight = weightLimit - currentWeight;
-            double leftoverValue = sackOfItems[i]->value * (remainingWeight / sackOfItems[i]->weight);
+            double leftoverValue = currentItem->value * (remainingWeight / currentItem->weight);
             total += leftoverValue;
-            cout << sackOfItems[i]->toString() << " ---> " << remainingWeight / sackOfItems[i]->weight << "% Added" << endl;
+            cout << currentItem->toString() << " ---> " << remainingWeight / currentItem->weight << "% Added" << endl;
             break;
         }
         else
         {
-            currentWeight += sackOfItems[i]->weight;
-            total += sackOfItems[i]->value;
-            cout << sackOfItems[i]->toString() << " ---> 100% Added" << endl;
+            currentWeight += currentItem->weight;
+            total += currentItem->value;
+            cout << currentItem->toString() << " ---> 100% Added" << endl;
         }
     }
 
@@ -129,23 +133,25 @@ void knapsack::getBestValueTotal(int weightLimit)
 
     for (int i = 0; i < sackOfItems.size(); i++)
     {
+        Item* currentItem = sackOfItems[i];
+
         if (currentWeight == weightLimit)
             break;
 
         // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
-        if (currentWeight + sackOfItems[i]->weight > weightLimit)
+        if (currentWeight + currentItem->weight > weightLimit)
         {
             double remainingWeight = weightLimit - currentWeight;
-            double leftoverValue = sackOfItems[i]->value * (remainingWeight / sackOfItems[i]->weight);
+            double leftoverValue = currentItem->value * (remainingWeight / currentItem->weight);
             total += leftoverValue;
-            cout << sackOfItems[i]->toString() << " ---> " << remainingWeight / sackOfItems[i]->weight << "% Added" << endl;
+            cout << currentItem->toString() << " ---> " << remainingWeight / currentItem->weight << "% Added" << endl;
             break;
         }
         else
         {
-            currentWeight += sackOfItems[i]->weight;
-            total += sackOfItems[i]->value;
-            cout << sackOfItems[i]->toString() << " ---> 100% Added" << endl;
+            currentWeight += currentItem->weight;
+            total += currentItem->value;
+            cout << currentItem->toString() << " ---> 100% Added" << endl;
         }
     }
 

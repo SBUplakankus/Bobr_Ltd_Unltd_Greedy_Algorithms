@@ -123,10 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="defence_system.cpp" />
     <ClCompile Include="Greedy_Algorithms.cpp" />
     <ClCompile Include="knapsack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="defence_system.h" />
     <ClInclude Include="knapsack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
