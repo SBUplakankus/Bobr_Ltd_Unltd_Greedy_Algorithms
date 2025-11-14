@@ -162,6 +162,7 @@ void knapsack::getBestValueTotal(int weightLimit)
 void knapsack::displaySackValues()
 {
     initializeSackOfItems();
+    cout << "------------------------------------" << endl;
     cout << "GREEDY ALGORITHM KNAPSACK DEMONSTRATION" << endl;
     cout << "Test Weight Total: " << TEST_WEIGHT_LIMIT << endl << endl;
     displaySackOfItems();

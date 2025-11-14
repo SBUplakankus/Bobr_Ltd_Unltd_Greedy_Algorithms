@@ -49,12 +49,11 @@ void defence_system::attackTargets()
 
 		if (energyRemaining <= 0) break;
 
-		if (energyRemaining - currentAlien->energyToKill <= 0)
+		if (energyRemaining - currentAlien->energyToKill < 0)
 		{
-			double energy = DEFENCE_SYSTEM_STARTING_ENERGY - energyRemaining;
-			double damagePercent = energy / currentAlien->energyToKill;
+			double damagePercent = energyRemaining / (double)currentAlien->energyToKill;
 			currentAlien->damage(damagePercent);
-			cout << currentAlien->toString() << " Status: " << fixed << setprecision(0) << (damagePercent * 10) << "% Damaged" << endl;
+			cout << currentAlien->toString() << " Status: " << fixed << setprecision(0) << (damagePercent * 100) << "% Damaged" << endl;
 			break;
 		}
 		else
@@ -68,10 +67,15 @@ void defence_system::attackTargets()
 
 	cout << "------------------------------------" << endl;
 	cout << "Total Kills: " << currentKills << endl << endl;
+	cout << "------------------------------------" << endl;
 }
 
 void defence_system::displayDefenceSystem()
 {
+	cout << "------------------------------------" << endl;
+	cout << "GREEDY ALGORITHM ALIEN DEFENCE SYSTEM DEMONSTRATION" << endl;
+	cout << "Test Energy Capacity: " << DEFENCE_SYSTEM_STARTING_ENERGY << endl;
+	cout << "Test Alien Count: " << ALIEN_TARGETS_TO_POPULATE << endl << endl;
 	populateTargetsList();
 	displayTargets();
 	attackTargets();

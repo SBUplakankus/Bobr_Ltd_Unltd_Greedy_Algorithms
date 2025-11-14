@@ -35,8 +35,11 @@ struct Alien
 
 	void damage(double damagePercent)
 	{
-		double amount = damagePercent / health;
-		health -= (int)amount;
+		double newHealth = health *= (1.0 - damagePercent);
+		health = (int)newHealth;
+
+		if (health < 0)
+			health = 0;
 	}
 
 	string toString() const
@@ -54,7 +57,7 @@ class defence_system
 {
 	private:
 		static const int ALIEN_TARGETS_TO_POPULATE = 10;
-		static const int DEFENCE_SYSTEM_STARTING_ENERGY = 100;
+		static const int DEFENCE_SYSTEM_STARTING_ENERGY = 250;
 		vector<Alien*> currentTargets;
 		int energyRemaining;
 		int currentKills;
