@@ -1,4 +1,4 @@
-# Greedy Algorithm Code Examples
+# ⚙️ Greedy Algorithm Code Examples
 
 This document contains the source code used in the greedy algorithm demonstrations.  
 Each example includes a short description and the full implementation used in the project.
@@ -115,6 +115,7 @@ void knapsack::getBestValueTotal(int weightLimit)
 ### :floppy_disk: Source Files
 - [Knapsack Header File + Item Struct](../Greedy_Algorithms/Greedy_Algorithms/knapsack.h)
 - [Knapsack C++ File](../Greedy_Algorithms/Greedy_Algorithms/knapsack.cpp)
+
 
 
 
