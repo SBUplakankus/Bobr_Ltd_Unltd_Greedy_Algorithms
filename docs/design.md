@@ -23,7 +23,8 @@ If a sentry can't kill the final alien at full health, it will damage it as much
 Picking off enemies in order of how easy it is to kill them allows the turret to kill as many as possible before powering down.
 
 **Defence System Diagram:**  
-![Aliens Before Diagram](../imgs/Aliens_Diagram_Before)
+![Aliens Before Diagram](../imgs/Aliens_Diagram_Before.jpg)
 
 ---
+
 
