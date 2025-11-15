@@ -45,7 +45,7 @@ This is the essence of a greedy algorithm:
 Before attacking, the system calculates each alien’s distance, health, and total energy-to-kill value.  
 These values are stored in a vector and sorted from **lowest → highest** energy required.
 
-<img src="../imgs/Aliens_Diagram_Before.jpg" alt="Aliens Before Diagram" width="500">
+<img src="../imgs/Aliens_Diagram_Before.jpg" alt="Aliens Before Diagram" width="700">
 
 ---
 
@@ -53,16 +53,17 @@ These values are stored in a vector and sorted from **lowest → highest** energ
 Now that the system has calculated and killed all possible enemies, it has powered down.
 We can see here the amount of aliens it managed to kill before doing so.
 
-![Aliens After Diagram](../imgs/Aliens_Diagram_After.jpg)
+<img src="../imgs/Aliens_Diagram_After.jpg" alt="Aliens After Diagram" width="700">
 
 ---
 
 ### **3. System Output**
-This is what it looks like in the console app, we have all of our aliens displayed.
+This is what it looks like in the console app, we have all of our aliens displayed to begin with.
 We then display the defence systems results and what aliens it was able to damage and kill.
 
-![Defence Output](../imgs/Defence_Output.png)
+<img src="../imgs/Defence_Output.png" alt="Defence Output" width="700">
 
 ---
+
 
 
