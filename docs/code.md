@@ -5,7 +5,7 @@ Each example includes a short description and the full implementation used in th
 
 ---
 
-## 1. Alien Defence System
+## 👽 Alien Defence System
 
 ### :page_with_curl: Description
 This example demonstrates a greedy strategy where the defence system attacks aliens in ascending order of the energy required to kill them.  
@@ -62,7 +62,7 @@ void defence_system::attackTargets()
 
 ---
 
-## 2. Knapsack Problem
+## 👜 Knapsack Problem
 
 ### :page_with_curl: Description
 This example demonstrates a greedy strategy that generates a set of items from a given list based off of a given weight limit. 
@@ -115,5 +115,6 @@ void knapsack::getBestValueTotal(int weightLimit)
 ### :floppy_disk: Source Files
 - [Knapsack Header File + Item Struct](../Greedy_Algorithms/Greedy_Algorithms/knapsack.h)
 - [Knapsack C++ File](../Greedy_Algorithms/Greedy_Algorithms/knapsack.cpp)
+
 
 
