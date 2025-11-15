@@ -1,30 +1,67 @@
 # Greedy Algorithm Designs
 
 This document explains the design and reasoning behind the greedy strategies used in the project.  
-Each example includes a brief explanation and accompanying diagrams and images.
+Each example includes a clear explanation and accompanying diagrams/images.
 
 ---
 
 ## 1. Alien Defence System
-**Explanation:**  
-The goal of the alien defence system example is to showcase how the greedy algorithm could be used in a game related setting. 
-Being inspired by the sentry scene in Aliens, the defence system has a given amount of energy it can use to kill as many aliens as possible.
-This is a common design you would see in defence or resource oriented games where you can deploy sentry guns to help you fight off hordes of enemies.
 
-**The Problem:** 
-Aliens are swarming your defences. You must try take out as many of them as possible before running out of power.
+### 📝 Overview
+The goal of the alien defence system example is to demonstrate how a greedy algorithm can be used in a game-related setting.  
+Inspired by the sentry gun scene from *Aliens*, the defence system is given a fixed amount of energy and must kill as many aliens as possible.
 
-**The Greedy Choice**
-To maximise efficiency, the defence system is being told to kill aliens in order of the least amount of energy required to kill them.
-This is calculated based off of the aliens distance to the sentry gun and health. 
-If a sentry can't kill the final alien at full health, it will damage it as much as possible before powering down.
+This type of design is commonly seen in defence or resource-management games where automated turrets handle waves of enemies.
 
-**Why This Choice Works**
-Picking off enemies in order of how easy it is to kill them allows the turret to kill as many as possible before powering down.
+---
 
-**Defence System Diagram:**  
+### ⚠️ The Problem
+Aliens are swarming the player's defences. The sentry gun must eliminate **as many targets as possible** before running out of energy.
+
+---
+
+### 🎯 The Greedy Choice
+To maximise efficiency, the defence system attacks aliens **in ascending order of the energy required to kill them**.
+
+This is based on:
+- The alien’s distance to the turret  
+- The alien’s health  
+- The computed *energy-to-kill* value  
+
+If the turret does not have enough energy to kill the final alien, it will deal **as much damage as possible** before shutting down.
+
+---
+
+### ✔️ Why This Works
+Prioritising the *cheapest* targets guarantees the turret achieves the **maximum number of kills** before running out of energy.  
+This is the essence of a greedy algorithm:  
+> Always pick the locally optimal (least expensive) choice to maximise the global outcome.
+
+---
+
+## 📊 Defence System Diagrams
+
+### **1. Pre Engagement**
+Before attacking, the system calculates each alien’s distance, health, and total energy-to-kill value.  
+These values are stored in a vector and sorted from **lowest → highest** energy required.
+
 ![Aliens Before Diagram](../imgs/Aliens_Diagram_Before.jpg)
 
 ---
 
+### **2. Post Engagement**
+Now that the system has calculated and killed all possible enemies, it has powered down.
+We can see here the amount of aliens it managed to kill before doing so.
+
+![Aliens After Diagram](../imgs/Aliens_Diagram_After.jpg)
+
+---
+
+### **3. System Output**
+This is what it looks like in the console app, we have all of our aliens displayed.
+We then display the defence systems results and what aliens it was able to damage and kill.
+
+![Defence Output](../imgs/Defence_Output.png)
+
+---
 
