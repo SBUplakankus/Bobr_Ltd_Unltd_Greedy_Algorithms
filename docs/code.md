@@ -74,81 +74,13 @@ There are three different criteria to showcase the algorithm:
 ### Greedy Algorithm Code
 ```cpp
 
-bool knapsack::sortByWeight(Item* a, Item* b)
-{
-    return a->weight > b->weight;
-}
-
-bool knapsack::sortByValue(Item* a, Item* b)
-{
-    return a->value > b->value;
-}
-
+// Static bool to sort the items vector by best value to weight ratio
 bool knapsack::sortByBestValue(Item* a, Item* b)
 {
     return a->valueRatio > b->valueRatio;
 }
 
-void knapsack::getHighestWeightTotal(int weightLimit)
-{
-    // Sort the vector from highest weight to lowest
-    sort(sackOfItems.begin(), sackOfItems.end(), sortByWeight);
-    int currentWeight = 0;
-    double total = 0;
-
-    for (int i = 0; i < sackOfItems.size(); i++)
-    {   
-        Item* currentItem = sackOfItems[i];
-
-        if (currentWeight == weightLimit)
-            break;
-
-        // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
-        if (currentWeight + currentItem->weight > weightLimit)
-        {
-            double remainingWeight = weightLimit - currentWeight;
-            double leftoverValue = currentItem->value * (remainingWeight / currentItem->weight);
-            total += leftoverValue;
-            break;
-        }
-        else
-        {
-            currentWeight += currentItem->weight;
-            total += currentItem->value;
-        }
-    }
-}
-
-void knapsack::getHighestValueTotal(int weightLimit)
-{
-    // Sort the vector from highest value to lowest
-    sort(sackOfItems.begin(), sackOfItems.end(), sortByValue);
-    int currentWeight = 0;
-    double total = 0;
-
-    for (int i = 0; i < sackOfItems.size(); i++)
-    {
-        Item* currentItem = sackOfItems[i];
-
-        if (currentWeight == weightLimit)
-            break;
-
-        // If the new weight is greater than the limit, add a fraction of the item to fill the remainder
-        if (currentWeight + currentItem->weight > weightLimit)
-        {
-            double remainingWeight = weightLimit - currentWeight;
-            double leftoverValue = currentItem->value * (remainingWeight / currentItem->weight);
-            total += leftoverValue;
-            break;
-        }
-        else
-        {
-            currentWeight += currentItem->weight;
-            total += currentItem->value;
-        }
-    }
-}
-
+// Knapsack Greedy Algorithm
 void knapsack::getBestValueTotal(int weightLimit)
 {
     // Sort the vector from highest value to weight ratio to lowest
@@ -183,3 +115,4 @@ void knapsack::getBestValueTotal(int weightLimit)
 ### Source Files
 - [Knapsack Header File + Item Struct](../Greedy_Algorithms/Greedy_Algorithms/knapsack.h)
 - [Knapsack C++ File](../Greedy_Algorithms/Greedy_Algorithms/knapsack.cpp)
+
