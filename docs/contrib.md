@@ -1,4 +1,4 @@
-# Contributions
+# 🗒️ Contributions
 
 This document lists the contributions of each team member for this project.
 
@@ -18,3 +18,4 @@ This document lists the contributions of each team member for this project.
 - ...
 
 ---
+
