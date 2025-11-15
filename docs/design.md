@@ -45,7 +45,7 @@ This is the essence of a greedy algorithm:
 Before attacking, the system calculates each alien’s distance, health, and total energy-to-kill value.  
 These values are stored in a vector and sorted from **lowest → highest** energy required.
 
-![Aliens Before Diagram](../imgs/Aliens_Diagram_Before.jpg)
+<img src="../imgs/Aliens_Diagram_Before.jpg" alt="Aliens Before Diagram" width="500">
 
 ---
 
@@ -64,4 +64,5 @@ We then display the defence systems results and what aliens it was able to damag
 ![Defence Output](../imgs/Defence_Output.png)
 
 ---
+
 
