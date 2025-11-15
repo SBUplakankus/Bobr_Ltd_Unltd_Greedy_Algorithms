@@ -7,11 +7,11 @@ Each example includes a short description and the full implementation used in th
 
 ## 1. Alien Defence System
 
-### Description
+### :page_with_curl: Description
 This example demonstrates a greedy strategy where the defence system attacks aliens in ascending order of the energy required to kill them.  
 The goal is to maximise the total number of kills before the turret runs out of energy.
 
-### Greedy Algorithm Code
+### :computer: Greedy Algorithm Code
 ```cpp
 
 // Static Bool used to sort the aliens in the vector
@@ -56,7 +56,7 @@ void defence_system::attackTargets()
 }
 ```
 
-### Source Files
+### :floppy_disk: Source Files
 - [Defence System Header File + Alien Struct](../Greedy_Algorithms/Greedy_Algorithms/defence_system.h)
 - [Defence System C++ File](../Greedy_Algorithms/Greedy_Algorithms/defence_system.cpp)
 
@@ -64,14 +64,14 @@ void defence_system::attackTargets()
 
 ## 2. Knapsack Problem
 
-### Description
+### :page_with_curl: Description
 This example demonstrates a greedy strategy that generates a set of items from a given list based off of a given weight limit. 
 There are three different criteria to showcase the algorithm:
 - Store items in order of highest weight
 - Store items in order of highest value
 - Store items in order of highest value to weight ratio
 
-### Greedy Algorithm Code
+### :computer: Greedy Algorithm Code
 ```cpp
 
 // Static bool to sort the items vector by best value to weight ratio
@@ -112,7 +112,8 @@ void knapsack::getBestValueTotal(int weightLimit)
 }
 ```
 
-### Source Files
+### :floppy_disk: Source Files
 - [Knapsack Header File + Item Struct](../Greedy_Algorithms/Greedy_Algorithms/knapsack.h)
 - [Knapsack C++ File](../Greedy_Algorithms/Greedy_Algorithms/knapsack.cpp)
+
 
