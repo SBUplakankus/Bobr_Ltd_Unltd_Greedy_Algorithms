@@ -33,9 +33,7 @@ If the turret does not have enough energy to kill the final alien, it will deal 
 ---
 
 ### ✔️ Why This Works
-Prioritising the *cheapest* targets guarantees the turret achieves the **maximum number of kills** before running out of energy.  
-This is the essence of a greedy algorithm:  
-> Always pick the locally optimal (least expensive) choice to maximise the global outcome.
+Prioritising the *cheapest* targets guarantees the turret achieves the **maximum number of kills** before running out of energy.
 
 ---
 
@@ -64,6 +62,7 @@ We then display the defence systems results and what aliens it was able to damag
 <img src="../imgs/Defence_Output.png" alt="Defence Output" width="700">
 
 ---
+
 
 
 
