@@ -54,3 +54,8 @@ void defence_system::attackTargets()
         }
     }
 }
+```
+
+### Source Files
+- [Defence System Header File + Alien Struct](../Greedy_Algorithms/Greedy_Algorithms/defence_system.h)
+- [Defence System C++ File](../Greedy_Algorithms/Greedy_Algorithms/defence_system.cpp)
