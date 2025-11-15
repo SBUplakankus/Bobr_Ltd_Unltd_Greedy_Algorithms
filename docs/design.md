@@ -1,11 +1,11 @@
-# Greedy Algorithm Designs
+# 🖌️ Greedy Algorithm Designs
 
 This document explains the design and reasoning behind the greedy strategies used in the project.  
 Each example includes a clear explanation and accompanying diagrams/images.
 
 ---
 
-## 1. Alien Defence System
+## 👽 Alien Defence System
 
 ### 📝 Overview
 The goal of the alien defence system example is to demonstrate how a greedy algorithm can be used in a game-related setting.  
@@ -62,6 +62,7 @@ We then display the defence systems results and what aliens it was able to damag
 <img src="../imgs/Defence_Output.png" alt="Defence Output" width="700">
 
 ---
+
 
 
 
