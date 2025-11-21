@@ -63,6 +63,60 @@ We then display the defence systems results and what aliens it was able to damag
 
 ---
 
+## 💰 Knapsack Problem
+
+### 📝 Overview
+The goal of the knapsack problem is to pack the most value out of a group of items based on a given weight limit.
+We demonstrate three examples of a greedy choice prioritising the items weight, value, and value to weight ratio.
+
+This showcases the importance of selecting the right greedy choice in your greedy algorithm.
+
+---
+
+### ⚠️ The Problem
+You can only fit so many items into your sack. **Get as much value as ossible** before running out of space.
+
+---
+
+### 🎯 The Greedy Choice
+To maximise value, first select items **with the highest value to weight ratio**.
+
+---
+
+### ✔️ Why This Works
+Filling up your space in order of how much value to weight an item gives you, selects the most valuable items first, maximising your final outcome.
+
+---
+
+## 📊 Knapsack Problem Outputs
+
+### **1. Base Items**
+The generated selection of items:
+
+<img src="../imgs/Aliens_Diagram_Before.jpg" alt="Aliens Before Diagram" width="700">
+
+---
+
+### **2. Sorting by Weight**
+Prioritising items based on their weight:
+
+<img src="../imgs/Aliens_Diagram_After.jpg" alt="Aliens After Diagram" width="700">
+
+---
+
+### **3. Sorting by Value**
+Prioritising items with the highest value:
+
+<img src="../imgs/Defence_Output.png" alt="Defence Output" width="700">
+
+---
+
+### **3. Sorting by Value to Weight Ratio**
+Prioritising items with the highest value to weight ratio *(Optimal Greedy Choice)*:
+
+<img src="../imgs/Defence_Output.png" alt="Defence Output" width="700">
+
+---
 
 
 
