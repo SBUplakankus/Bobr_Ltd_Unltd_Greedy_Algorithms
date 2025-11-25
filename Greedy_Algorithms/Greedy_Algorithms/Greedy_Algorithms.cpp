@@ -22,5 +22,4 @@ int main()
     CoinChange coins;
     coins.displayProblem();
     coins.solveGreedy();
-    coins.displayGreedyLimitation();
 }

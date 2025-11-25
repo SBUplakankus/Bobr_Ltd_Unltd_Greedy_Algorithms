@@ -26,6 +26,5 @@ public:
 
     /// <summary>
     /// Display when greedy algorithm fails
-    /// </summary>
-    void displayGreedyLimitation();
+  
 };
