@@ -123,11 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="coin_change.cpp" />
     <ClCompile Include="defence_system.cpp" />
     <ClCompile Include="Greedy_Algorithms.cpp" />
     <ClCompile Include="knapsack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="coin_change.h" />
     <ClInclude Include="defence_system.h" />
     <ClInclude Include="knapsack.h" />
   </ItemGroup>
