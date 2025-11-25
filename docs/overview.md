@@ -13,7 +13,7 @@ Greedy algorithms allow to effectively solve a certain range of optimization tas
 |----------------------|------------------------------|------------------------|
 | **Alien Defence System** | Kill the maximum amount of aliens before running out of energy | Kills enemies in order of lowest energy usage |
 | **Knapsack Problem** | Get the most value from a given list of items | Pick items with highest value-to-weight ratio first |
-| **Fuhad Solution** | ... | ... |
+| **Fuhad Solution** | Selects coin change | Selects the largest possible coin denomination first to minimize the total number of coins needed to make the target amount |
 
 ## :interrobang: How to detect Greedy Algorithm
  - **Local optimality** - at every step the algorithm makes a choice that seems best, most cost-effective at the moment (and may be            retroactively incorrect).
@@ -41,6 +41,7 @@ Greedy algorithms allow to effectively solve a certain range of optimization tas
 - **Grand Thief Auto San Andreas** : In GTA San Andreas AI planes which are flying around have a system of vectors. One of the situations happened when all vectors warned about a collision. The plane makes a 180-degree turn and reaches 500 metres. According to this information, we can assume that planes, when detecting a collision, make changes immediately without thinking about the future. As well as planes checking for collision every 2 seconds and making a new point to reach, without thinking where the next point will be. As well, spawning planes is a greedy algorithm because the first route for flying depends on the way the player is looking, so technically planes are flying blindly for the first two seconds before the first check.
 
 This repository provides explanations, code implementations, and visual examples of greedy algorithms in **C++**.
+
 
 
 
