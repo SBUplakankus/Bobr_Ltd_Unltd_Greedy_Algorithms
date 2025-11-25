@@ -22,9 +22,10 @@ Greedy algorithms allow to effectively solve a certain range of optimization tas
  - **Incremental solution** - the algorithm builds a solution step by step, adding new elements to an already built partial solution.
 
 ## :white_check_mark: Advantages
-- Simple and easy to implement.
-- Often more **time-efficient** for problems with greedy choice property.
+- Simple and easy to implement. Generally simple to understand and program, because their logic is based on making the most profitable decisions at each stage.
+- Often more **time-efficient** for problems with greedy choice property. Usually have low computational complexity, often linear or logarithmic, making them suitable for tasks requiring quick solutions.
 - Works well for **game optimisation** where you don't need to evaluate all possibilities.
+- Small memory requirements. because greedy algorithms make solutions based on the current state, they do not require storing a large amount of intermediate data this saves memory.
 
 ## :warning: Limitations
 - Greedy algorithms do **not always** return the optimal solution.
@@ -37,6 +38,7 @@ Greedy algorithms allow to effectively solve a certain range of optimization tas
 ---
 
 This repository provides explanations, code implementations, and visual examples of greedy algorithms in **C++**.
+
 
 
 
