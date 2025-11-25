@@ -4,6 +4,9 @@
 In the Greedy Algorithm, the solution is built part by part.  
 The decision to choose the next part is done on the basis that it gives an **immediate benefit**.  
 They are commonly used in games as optimisation is key — which is why we chose to feature them in our project.
+Greedy algorithms allow to effectively solve a certain range of optimization tasks. However, their application requires careful analysis of the task and structure of the processed data, as a greedy approach does not always guarantee an optimal solution. 
+
+
 
 ## :jigsaw: Our Examples
 | :video_game: Problem | :page_facing_up: Description | :zap: Greedy Strategy |
@@ -28,3 +31,4 @@ They are commonly used in games as optimisation is key — which is why we chose
 ---
 
 This repository provides explanations, code implementations, and visual examples of greedy algorithms in **C++**.
+
