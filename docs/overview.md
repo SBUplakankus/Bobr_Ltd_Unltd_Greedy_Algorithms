@@ -25,11 +25,13 @@ Greedy algorithms allow to effectively solve a certain range of optimization tas
 - Simple and easy to implement. Generally simple to understand and program, because their logic is based on making the most profitable decisions at each stage.
 - Often more **time-efficient** for problems with greedy choice property. Usually have low computational complexity, often linear or logarithmic, making them suitable for tasks requiring quick solutions.
 - Works well for **game optimisation** where you don't need to evaluate all possibilities.
-- Small memory requirements. because greedy algorithms make solutions based on the current state, they do not require storing a large amount of intermediate data this saves memory.
+- **Small memory requirements.** because greedy algorithms make solutions based on the current state, they do not require storing a large amount of intermediate data this saves memory.
 
 ## :warning: Limitations
 - Greedy algorithms do **not always** return the optimal solution.
+- Problems for which it is necessary to evaluate the consequences of actions cannot be solved by a greedy algorithm effectively.
 - They require **careful analysis** to confirm the greedy choice is correct for the problem.
+- **Lack of flexibility.** Greedy algorithms follow a fixed strategy of choice, not allowing for changes or improvements in the solutions during execution. They do not adapt to changing conditions or new data.
 
 ## :brain: When to Use
 - Problems with **optimal substructure** and **greedy choice property**.
@@ -38,6 +40,7 @@ Greedy algorithms allow to effectively solve a certain range of optimization tas
 ---
 
 This repository provides explanations, code implementations, and visual examples of greedy algorithms in **C++**.
+
 
 
 
