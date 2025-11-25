@@ -29,9 +29,10 @@ I learned alot about Greedy Algorithms doing this project in the group. We had n
 I have done a lot of teaching work, voluntary and paid in my free time the last few years, so the idea of coming up with a presentation as part of a college project was really cool and something I enjoyed very much. I would love to do more stuff like this in the future as to teach someone about something, you yourself have to know mostly everything about it.
 
 ### Fuhad
-This project pushed me to learn about Greedy Algorithms. Developing the Coin Change example taught me to balance simplicity with educational value. I focused on core greedy principles while  showing the algorithm's limitations.
+This project pushed me to learn about Greedy Algorithms. Developing the Coin Change example taught me to balance simplicity with educational value. I focused on core greedy principles while obeying the algorithm's limitations.
 
 Integrating my code required mastering the project's structure, which I achieved by studying my teammates' work. This experience highlighted that effective teaching relies on clear examples, not just complex code. I appreciate my group mates Seán and Nikita for their collaboration and hardwork as this project would not have been near this quality without them.
+
 
 
 
