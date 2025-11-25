@@ -39,10 +39,11 @@ Greedy algorithms allow to effectively solve a certain range of optimization tas
 ## :video_game: In game examples
 **Europa Universals 4**
 - In Europa Universalis 4 AI, if he finds out that he can demolish the enemy army, the bot will do that in most situations. According to this knowledge, we can assume that AI in EU4 has a greedy algorithm if a small stack army is detected next to his army. One more proof that it is a greedy algorithm is that even if a big enemy stack of army is in range to go into this battle, AI will start the attack anyway.
-- **Grand Thief Auto San Andreas**
--In GTA San Andreas AI planes which are flying around have a system of vectors. One of the situations happened when all vectors warned about a collision. The plane makes a 180-degree turn and reaches 500 metres. According to this information, we can assume that planes, when detecting a collision, make changes immediately without thinking about the future. As well as planes checking for collision every 2 seconds and making a new point to reach, without thinking where the next point will be. As well, spawning planes is a greedy algorithm because the first route for flying depends on the way the player is looking, so technically planes are flying blindly for the first two seconds before the first check.
+ **Grand Thief Auto San Andreas**
+- In GTA San Andreas AI planes which are flying around have a system of vectors. One of the situations happened when all vectors warned about a collision. The plane makes a 180-degree turn and reaches 500 metres. According to this information, we can assume that planes, when detecting a collision, make changes immediately without thinking about the future. As well as planes checking for collision every 2 seconds and making a new point to reach, without thinking where the next point will be. As well, spawning planes is a greedy algorithm because the first route for flying depends on the way the player is looking, so technically planes are flying blindly for the first two seconds before the first check.
 
 This repository provides explanations, code implementations, and visual examples of greedy algorithms in **C++**.
+
 
 
 
