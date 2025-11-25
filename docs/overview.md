@@ -16,9 +16,10 @@ Greedy algorithms allow to effectively solve a certain range of optimization tas
 | **Fuhad Solution** | ... | ... |
 
 ## :interrobang: How to detect Greedy Algorithm
-**Local optimality** - at every step the algorithm makes a choice that seems best, most cost-effective at the moment (and may be retroactively incorrect).
-**Irreversibility** - the choice made in each step is not changed. The algorithm does not return to change its previous decision.
-**Incremental solution** - the algorithm builds a solution step by step, adding new elements to an already built partial solution.
+-**Local optimality** - at every step the algorithm makes a choice that seems best, most cost-effective at the moment (and may be retroactively incorrect).
+
+-**Irreversibility** - the choice made in each step is not changed. The algorithm does not return to change its previous decision.
+-**Incremental solution** - the algorithm builds a solution step by step, adding new elements to an already built partial solution.
 
 ## :white_check_mark: Advantages
 - Simple and easy to implement.
@@ -36,6 +37,7 @@ Greedy algorithms allow to effectively solve a certain range of optimization tas
 ---
 
 This repository provides explanations, code implementations, and visual examples of greedy algorithms in **C++**.
+
 
 
 
