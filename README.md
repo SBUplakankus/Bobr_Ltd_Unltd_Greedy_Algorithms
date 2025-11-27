@@ -1,4 +1,4 @@
-# 🍴🍔 Greedy Algorithms
+# 🍴🍔 Greedy Algorithms 🍔🍴
 
 Group Project with Seán, Fuhad and Nikita
 
