@@ -11,12 +11,10 @@ This document lists the contributions of each team member for this project and t
 ### Nikita
 - Created the Presentation
 - Overview and research for Greedy Algorithms
-- ...
 
 ### Fuhad
 - Worked on the presentation.
 - Created the coin change system.
-- 
 
 ---
 
@@ -32,6 +30,7 @@ I have done a lot of teaching work, voluntary and paid in my free time the last 
 This project pushed me to learn about Greedy Algorithms. Developing the Coin Change example taught me to balance simplicity with educational value. I focused on core greedy principles while obeying the algorithm's limitations.
 
 Integrating my code required mastering the project's structure, which I achieved by studying my teammates' work. This experience highlighted that effective teaching relies on clear examples, not just complex code. I appreciate my group mates Seán and Nikita for their collaboration and hardwork as this project would not have been near this quality without them.
+
 
 
 
