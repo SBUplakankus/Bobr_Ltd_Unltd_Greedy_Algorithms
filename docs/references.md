@@ -9,7 +9,8 @@ This document lists the resources used in this project.
 | Video | Greedy Algorithms Explained | [🔗](https://www.youtube.com/watch?v=lfQvPHGtu6Q&t=926s&pp=ygURZ3JlZWR5IGFsZ29yaXRobXM%3D) |
 | Image | Game Icons | [🔗](https://game-icons.net/) |
 | Image | GitHub Icons | [🔗](https://gist.github.com/rxaviers/7360908) |
-| Video | Why planes periodically crash in GTA San Andreas? - Feat. BadgerGoodger | [🔗]((https://www.youtube.com/watch?v=hrJ0eVY5ACw)) | 
+| Video | Why planes periodically crash in GTA San Andreas? - Feat. BadgerGoodger | [🔗](https://www.youtube.com/watch?v=hrJ0eVY5ACw) | 
+
 
 
 
